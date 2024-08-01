@@ -1,4 +1,4 @@
-main{
+main {
   display: flex;
   gap: 4rem;
 }
@@ -8,6 +8,18 @@ main{
   justify-items: flex-start;
 } */
 
-#content{
+#content {
   width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.card {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
 }

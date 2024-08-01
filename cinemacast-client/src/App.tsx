@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./App.css";
+import MoviesPage from "./movies/MoviesPage";
 
 function App() {
   return (
@@ -77,8 +77,7 @@ function App() {
           </aside>
         </section>
         <section id="content">
-          <h4>Movies</h4>
-          <hr />
+          <MoviesPage />
         </section>
       </main>
     </>
