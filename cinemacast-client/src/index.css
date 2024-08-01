@@ -1,0 +1,13 @@
+main{
+  display: flex;
+  gap: 4rem;
+}
+/* 
+#left-nav{
+  display: flex;
+  justify-items: flex-start;
+} */
+
+#content{
+  width: 100%;
+}
