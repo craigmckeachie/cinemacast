@@ -1,6 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
 import MoviesPage from "./movies/MoviesPage";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -78,22 +79,26 @@ function App() {
             <nav>
               <ul>
                 <li>
-                  <a href="#" aria-current="page">
+                  <Link to={"/movies"} aria-current="page">
                     Movies
+                  </Link>
+                </li>
+                <li>
+                  <a href="#" className="contrast">
+                    Actors
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="contrast">Actors</a>
-                </li>
-                <li>
-                  <a href="#" className="contrast">Credits</a>
+                  <a href="#" className="contrast">
+                    Credits
+                  </a>
                 </li>
               </ul>
             </nav>
           </aside>
         </section>
         <section id="content">
-          <MoviesPage />
+          <Outlet />
         </section>
       </main>
     </>
