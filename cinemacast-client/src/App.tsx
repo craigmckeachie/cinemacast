@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 import MoviesPage from "./movies/MoviesPage";
 
@@ -59,18 +60,33 @@ function App() {
       </header>
 
       <main className="container">
+        <Toaster
+          toastOptions={{
+            success: {
+              iconTheme: {
+                primary: "#0d6efd",
+                secondary: "white",
+              },
+            },
+            style: {
+              maxWidth: 500,
+            },
+          }}
+        />
         <section id="left-nav">
           <aside>
             <nav>
               <ul>
                 <li>
-                  <a href="#">Movies</a>
+                  <a href="#" aria-current="page">
+                    Movies
+                  </a>
                 </li>
                 <li>
-                  <a href="#">Actors</a>
+                  <a href="#" className="contrast">Actors</a>
                 </li>
                 <li>
-                  <a href="#">Credits</a>
+                  <a href="#" className="contrast">Credits</a>
                 </li>
               </ul>
             </nav>
