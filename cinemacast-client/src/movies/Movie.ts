@@ -1,10 +1,10 @@
 export class Movie {
   id: number | undefined;
   title = "";
-  year = 0;
-  director = "";
   genre = "";
+  year = 0;
   rating = 0;
+  director = "";
   budgetInMillions = 0;
 
   get isNew(): boolean {
@@ -15,10 +15,10 @@ export class Movie {
     if (!initializer) return;
     if (initializer.id) this.id = initializer.id;
     if (initializer.title) this.title = initializer.title;
-    if (initializer.year) this.year = initializer.year;
-    if (initializer.director) this.director = initializer.director;
     if (initializer.genre) this.genre = initializer.genre;
+    if (initializer.year) this.year = initializer.year;
     if (initializer.rating) this.rating = initializer.rating;
+    if (initializer.director) this.director = initializer.director;
     if (initializer.budgetInMillions) this.budgetInMillions = initializer.budgetInMillions;
   }
 }
