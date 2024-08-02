@@ -33,7 +33,7 @@ main {
 
 .actions-footer{
   display: flex;
-  justify-content: right;
+  justify-content: flex-start;
   align-items: baseline;
   gap: 1.2rem;
 }

@@ -36,7 +36,7 @@ function App() {
               </svg>
             </li>
             <li>
-              <strong>Cinemacast</strong>
+              <strong>CinemaCast</strong>
             </li>
           </ul>
           <ul>
