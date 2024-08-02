@@ -2,10 +2,13 @@ main {
   display: flex;
   gap: 4rem;
 }
-/* 
-#left-nav{
-  display: flex;
-  justify-items: flex-start;
+
+header{
+  margin-bottom: 2rem;
+}
+
+/* .left-nav{
+  
 } */
 
 #content {

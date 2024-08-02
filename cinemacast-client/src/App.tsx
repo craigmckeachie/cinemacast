@@ -1,12 +1,11 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import MoviesPage from "./movies/MoviesPage";
 import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <header className="container-fluid">
+      <header className="container">
         <nav>
           <ul>
             <li>
@@ -74,7 +73,7 @@ function App() {
             },
           }}
         />
-        <section id="left-nav">
+        <section className="left-nav">
           <aside>
             <nav>
               <ul>
