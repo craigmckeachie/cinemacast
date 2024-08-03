@@ -34,7 +34,7 @@ function MovieList() {
       )}
       <section className="list">
         {movies.map((movie) => (
-          <article className="card">
+          <article className="card p-4">
             <strong>{movie.title}</strong>
             <small>
               Genre: {movie.genre} ({movie.year})

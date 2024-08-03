@@ -1,18 +1,5 @@
-main {
-  display: flex;
-  gap: 4rem;
-}
-
-header{
-  margin-bottom: 2rem;
-}
-
-/* .left-nav{
-  
-} */
-
-#content {
-  width: 100%;
+body{
+  margin:0;
 }
 
 .list {
@@ -23,20 +10,30 @@ header{
 
 .card {
   width: 18rem;
-  display: flex;
-  flex-direction: column;
 }
 
-.busy-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
+a {
+  --bs-link-color-rgb: rgb(255, 121, 22);
 }
 
-.actions-footer{
+.nav-pills {
+  /* --bs-nav-pills-border-radius: var(--bs-border-radius); */
+  --bs-nav-pills-link-active-color: #fff;
+  --bs-nav-pills-link-active-bg: #ff7916;
+}
+
+
+/* 
+.nav {
+  --bs-nav-link-padding-y: 0.6rem;
+} */
+
+
+
+
+/* .actions-footer {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
   gap: 1.2rem;
-}
+} */
