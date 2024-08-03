@@ -24,7 +24,7 @@ function App() {
           <strong>CinemaCast</strong>
         </div>
         <details className="dropdown pe-5">
-          <summary className="btn btn-tertiary1 dropdown-toggle">
+          <summary className="btn btn-tertiary dropdown-toggle">
             {/* <span
               style={{ width: "3rem", height: "3rem" }}
               className="d-flex  bg-primary-subtle fs-5 text-secondary align-items-center justify-content-center rounded-circle me-2"
@@ -34,7 +34,7 @@ function App() {
             Audrey Madison
           </summary>
           <div>
-            <ul className="dropdown-menu" style={{ display: "revert" }}>
+            <ul className="dropdown-menu bg-body-tertiary" style={{ display: "revert" }}>
               <li>
                 <a className="dropdown-item" href="#">
                   Profile
