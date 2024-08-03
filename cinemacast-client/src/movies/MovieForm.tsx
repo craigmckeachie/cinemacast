@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Movie } from "./Movie";
 import toast from "react-hot-toast";
 import { movieAPI } from "./MovieAPI";
@@ -10,14 +10,26 @@ function MovieForm() {
     handleSubmit,
     formState: { errors },
   } = useForm<Movie>({
-    defaultValues: new Movie(),
-    mode: "onChange",
+    defaultValues: async () => {
+      if (!movieId) {
+        return Promise.resolve(new Movie());
+      } else {
+        return await movieAPI.find(movieId);
+      }
+    },
   });
+
   const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const movieId = Number(id);
 
   const save: SubmitHandler<Movie> = async (movie) => {
     try {
-      await movieAPI.post(movie);
+      if (movie.isNew) {
+        await movieAPI.post(movie);
+      } else {
+        await movieAPI.put(movie);
+      }
       navigate("/movies");
     } catch (error: any) {
       toast.error(error.message);

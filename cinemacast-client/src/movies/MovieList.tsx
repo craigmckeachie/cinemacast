@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { movieAPI } from "./MovieAPI";
 import { Movie } from "./Movie";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function MovieList() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -42,6 +43,7 @@ function MovieList() {
             <small></small>
             <small>Rating: {movie.rating}</small>
             <small>Director: {movie.director}</small>
+            <Link to={`/movies/edit/${movie.id}`}>edit</Link>
           </article>
         ))}
       </section>

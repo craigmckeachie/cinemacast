@@ -6,6 +6,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MoviesPage from "./movies/MoviesPage.tsx";
 import MovieCreatePage from "./movies/MovieCreatePage.tsx";
+import MovieEditPage from "./movies/MovieEditPage.tsx";
 
 let router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ let router = createBrowserRouter([
     children: [
       { path: "movies", element: <MoviesPage /> },
       { path: "movies/create", element: <MovieCreatePage /> },
+      { path: "movies/edit/:id", element: <MovieEditPage /> },
     ],
   },
 ]);
