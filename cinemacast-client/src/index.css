@@ -1,12 +1,4 @@
-body{
-  margin:0;
-}
 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
 
 .card {
   width: 18rem;
@@ -22,18 +14,8 @@ a {
   --bs-nav-pills-link-active-bg: #ff7916;
 }
 
-
 /* 
 .nav {
   --bs-nav-link-padding-y: 0.6rem;
 } */
-
-
-
-
-/* .actions-footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  gap: 1.2rem;
-} */
+ 

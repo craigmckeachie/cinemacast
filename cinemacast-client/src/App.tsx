@@ -56,7 +56,7 @@ function App() {
             },
           }}
         />
-        <section className="bg-body-tertiary vh-100 p-4  border-end" style={{ width: "30rem" }}>
+        <section className="bg-body-tertiary vh-100 p-4  border-end">
           <aside className="">
             <nav>
               <ul className="nav nav-pills flex-column">
@@ -79,7 +79,7 @@ function App() {
             </nav>
           </aside>
         </section>
-        <section className="p-4">
+        <section className="p-4 w-100">
           <Outlet />
         </section>
       </main>

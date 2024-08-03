@@ -26,13 +26,13 @@ function MovieList() {
   return (
     <>
       {busy && (
-        <section className="busy-container">
-          <button aria-busy="true" className="outline secondary">
-            Please wait…
-          </button>
+        <section className="d-flex justify-content-center align-items-center align-content-center vh-100">
+          <div className=" spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
         </section>
       )}
-      <section className="list">
+      <section className="d-flex flex-wrap gap-4">
         {movies.map((movie) => (
           <article className="card p-4">
             <strong>{movie.title}</strong>
