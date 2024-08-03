@@ -56,7 +56,7 @@ function App() {
             },
           }}
         />
-        <section className="bg-body-tertiary vh-100 p-4  border-end">
+        <section className="bg-body-tertiary vh-100 p-4  border-end" style={{width:"12rem"}}>
           <aside className="">
             <nav>
               <ul className="nav nav-pills flex-column">
