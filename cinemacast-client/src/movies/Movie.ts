@@ -2,10 +2,10 @@ export class Movie {
   id: number | undefined;
   title = "";
   genre = "";
-  year = 0;
-  rating = 0;
+  year: number | undefined = undefined;
+  rating: number | undefined = undefined;
   director = "";
-  budgetInMillions = 0;
+  budgetInMillions: number | undefined = undefined;
 
   get isNew(): boolean {
     return this.id === undefined;

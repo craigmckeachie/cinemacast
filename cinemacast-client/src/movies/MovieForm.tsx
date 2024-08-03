@@ -1,20 +1,58 @@
-import { Link } from "react-router-dom";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
+import { Movie } from "./Movie";
+import toast from "react-hot-toast";
+import { movieAPI } from "./MovieAPI";
 
 function MovieForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Movie>({
+    defaultValues: new Movie(),
+    mode: "onChange",
+  });
+  const navigate = useNavigate();
+
+  const save: SubmitHandler<Movie> = async (movie) => {
+    try {
+      await movieAPI.post(movie);
+      navigate("/movies");
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+  };
+
   return (
-    <form className="w-50">
+    <form className="w-50" onSubmit={handleSubmit(save)} noValidate>
       <div className="mb-3">
         <label className="form-label" htmlFor="title">
           Title
         </label>
-        <input className="form-control" type="text" id="title" />
+        <input
+          id="title"
+          {...register("title", {
+            required: "Title is required",
+          })}
+          className={`form-control ${errors.title && "is-invalid"} `}
+          type="text"
+          autoFocus
+        />
+        <div className="invalid-feedback">{errors?.title?.message}</div>
       </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="genre">
           Genre
         </label>
-        <select className="form-select" id="genre">
+        <select
+          {...register("genre", {
+            required: "Genre is required",
+          })}
+          className={`form-select ${errors.genre && "is-invalid"} `}
+          id="genre"
+        >
           <option value="">Select...</option>
           <option value="Action">Action</option>
           <option value="Sci-Fi">Sci-Fi</option>
@@ -24,34 +62,65 @@ function MovieForm() {
           <option value="Adventure">Adventure</option>
           <option value="Drama">Drama</option>
         </select>
+        <div className="invalid-feedback">{errors?.genre?.message}</div>
       </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="year">
           Year
         </label>
-        <input className="form-control" type="number" id="year" min="1920" max="3000" />
+        <input
+          {...register("year", {
+            valueAsNumber: true,
+            required: "Year is required",
+          })}
+          className={`form-control ${errors.year && "is-invalid"} `}
+          type="number"
+          id="year"
+          min="1920"
+          max="3000"
+        />
+        <div className="invalid-feedback">{errors.year?.message}</div>
       </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="rating">
           Rating
         </label>
-        <input className="form-control" type="number" id="rating" min="1.0" max="10.0" step=".1" />
+        <input
+          {...register("rating", {
+            valueAsNumber: true,
+            minLength: { value: 1, message: "1 is the lowest rating" },
+            maxLength: { value: 10, message: "10 is the highest rating" },
+          })}
+          className={`form-control ${errors.rating && "is-invalid"} `}
+          type="number"
+          id="rating"
+          min="1.0"
+          max="10.0"
+          step=".1"
+        />
+        <div className="invalid-feedback">{errors.rating?.message}</div>
       </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="director">
           Director
         </label>
-        <input className="form-control" type="text" id="director" />
+        <input {...register("director")} className="form-control" type="text" id="director" />
       </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="budgetInMillions">
           Budget
         </label>
-        <input className="form-control" type="number" id="budgetInMillions" step="1" />
+        <input
+          {...register("budgetInMillions", { valueAsNumber: true })}
+          className="form-control"
+          type="number"
+          id="budgetInMillions"
+          step="1"
+        />
         <div className="form-text">Budget numbers are entered in millions</div>
       </div>
 

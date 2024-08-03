@@ -34,7 +34,7 @@ function MovieList() {
       )}
       <section className="d-flex flex-wrap gap-4">
         {movies.map((movie) => (
-          <article className="card p-4">
+          <article className="card p-4" key={movie.id}>
             <strong>{movie.title}</strong>
             <small>
               Genre: {movie.genre} ({movie.year})
