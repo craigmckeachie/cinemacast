@@ -23,19 +23,35 @@ function App() {
           </svg>
           <strong>CinemaCast</strong>
         </div>
-        <details className="dropdown">
-          <summary>Account</summary>
-          <ul dir="rtl">
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="#">Settings</a>
-            </li>
-            <li>
-              <a href="#">Sign out</a>
-            </li>
-          </ul>
+        <details className="dropdown pe-5">
+          <summary className="btn btn-tertiary1 dropdown-toggle">
+            {/* <span
+              style={{ width: "3rem", height: "3rem" }}
+              className="d-flex  bg-primary-subtle fs-5 text-secondary align-items-center justify-content-center rounded-circle me-2"
+            >
+              AM
+            </span> */}
+            Audrey Madison
+          </summary>
+          <div>
+            <ul className="dropdown-menu" style={{ display: "revert" }}>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </div>
         </details>
       </header>
 
