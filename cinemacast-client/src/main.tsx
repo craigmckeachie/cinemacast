@@ -8,6 +8,8 @@ import MoviesPage from "./movies/MoviesPage.tsx";
 import MovieCreatePage from "./movies/MovieCreatePage.tsx";
 import MovieEditPage from "./movies/MovieEditPage.tsx";
 import MovieDetailPage from "./movies/MovieDetailPage.tsx";
+import CreditCreatePage from "./credits/CreditCreatePage.tsx";
+import CreditEditPage from "./credits/CreditEditPage.tsx";
 
 let router = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ let router = createBrowserRouter([
       { path: "movies/create", element: <MovieCreatePage /> },
       { path: "movies/edit/:id", element: <MovieEditPage /> },
       { path: "movies/detail/:id", element: <MovieDetailPage /> },
+      {
+        path: "movies/detail/:movieId/credit/create",
+        element: <CreditCreatePage />,
+      },
+      {
+        path: "movies/detail/:movieId/credit/edit/:creditId",
+        element: <CreditEditPage />,
+      },
     ],
   },
 ]);

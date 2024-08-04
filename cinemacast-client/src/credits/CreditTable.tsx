@@ -21,7 +21,7 @@ function CreditTable({ movie }: CreditTableProps) {
             <td>{credit.actor?.name}</td>
             <td>{credit.role}</td>
             <td>
-              <Link to={`/movies/detail/${movie.id}/credit/${credit.id}`}>edit</Link>
+              <Link to={`/movies/detail/${movie.id}/credit/edit/${credit.id}`}>edit</Link>
             </td>
           </tr>
         ))}

@@ -1,7 +1,7 @@
 import { Credit } from "../credits/Credit";
 
 export class Movie {
-  id: number | undefined;
+  id: number | undefined = undefined;
   title = "";
   genre = "";
   year: number | undefined = undefined;

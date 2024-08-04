@@ -1,9 +1,9 @@
-import { Actor } from "../actor/Actor";
+import { Actor } from "../actors/Actor";
 
 export class Credit {
-  id: number | undefined;
-  movieId: number | undefined;
-  actorId: number | undefined;
+  id: number | undefined = undefined;
+  movieId: number | undefined = undefined;
+  actorId: number | undefined = undefined;
   role = "";
   actor: Actor | undefined;
 
@@ -14,9 +14,9 @@ export class Credit {
   constructor(initializer?: any) {
     if (!initializer) return;
     if (initializer.id) this.id = initializer.id;
-    if (initializer.id) this.movieId = initializer.movieId;
-    if (initializer.id) this.actorId = initializer.actorId;
-    if (initializer.title) this.role = initializer.role;
-    if (initializer.title) this.actor = initializer.actor;
+    if (initializer.movieId) this.movieId = initializer.movieId;
+    if (initializer.actorId) this.actorId = initializer.actorId;
+    if (initializer.role) this.role = initializer.role;
+    if (initializer.actor) this.actor = initializer.actor;
   }
 }

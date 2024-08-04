@@ -35,7 +35,7 @@ function MovieDetailPage() {
       <nav className="d-flex justify-content-between pe-2">
         <h4>Movie</h4>
         <Link to={`/movies/edit/${movie.id}`} className="btn btn-outline-primary">
-          edit
+          edit movie
         </Link>
       </nav>
       <hr />
@@ -68,7 +68,13 @@ function MovieDetailPage() {
               </dl>
             </section>
             <section className="card p-4 mt-4 w-100">
-              <h5>Cast</h5>
+              <header className="d-flex justify-content-between">
+                <h5>Cast</h5>
+
+                <Link className="btn btn-outline-primary" to={`/movies/detail/${movie.id}/credit/create`}>
+                  + add credit
+                </Link>
+              </header>
               <CreditTable movie={movie} />
             </section>
           </>
