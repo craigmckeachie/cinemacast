@@ -5,23 +5,22 @@ import toast from "react-hot-toast";
 import { movieAPI } from "./MovieAPI";
 
 function MovieForm() {
+  const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Movie>({
     defaultValues: async () => {
-      if (!movieId) {
+      if (!id) {
         return Promise.resolve(new Movie());
       } else {
-        return await movieAPI.find(movieId);
+        return await movieAPI.find(id);
       }
     },
   });
-
-  const navigate = useNavigate();
-  const { id } = useParams<{ id: string }>();
-  const movieId = Number(id);
 
   const save: SubmitHandler<Movie> = async (movie) => {
     try {

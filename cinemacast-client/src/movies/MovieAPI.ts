@@ -8,7 +8,7 @@ export const movieAPI = {
     return fetch(url).then(delay(400)).then(checkStatus).then(parseJSON);
   },
 
-  find(id: number): Promise<Movie> {
+  find(id: string): Promise<Movie> {
     return fetch(`${url}/${id}`).then(checkStatus).then(parseJSON);
   },
 

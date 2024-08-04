@@ -201,8 +201,8 @@
       "budgetInMillions": 75
     },
     {
-      "id": "0601",
-      "title": "The Killer",
+      "id": "21",
+      "title": "The Killers",
       "genre": "Drama",
       "year": 2024,
       "rating": 8,
@@ -210,13 +210,31 @@
       "budgetInMillions": 2
     },
     {
-      "id": "9517",
+      "id": "22",
       "title": "The Hangover",
       "genre": "Comedy",
       "year": 2012,
       "rating": 6,
       "director": "Miral Sims",
       "budgetInMillions": 10
+    },
+    {
+      "id": "9278",
+      "title": "Done",
+      "genre": "Action",
+      "year": 1920,
+      "rating": 2,
+      "director": "dfs fdsd",
+      "budgetInMillions": 3
+    },
+    {
+      "id": "80c9",
+      "title": "Using Things",
+      "genre": "Animation",
+      "year": 1921,
+      "rating": 1.1,
+      "director": "",
+      "budgetInMillions": null
     }
   ],
   "actors": [
