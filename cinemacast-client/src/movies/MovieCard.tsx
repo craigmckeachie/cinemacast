@@ -12,17 +12,20 @@ interface MovieCardProps {
 function MovieCard({ movie, onRemove }: MovieCardProps) {
   return (
     <article className="card p-4" key={movie.id}>
-      <strong>{movie.title}</strong>
+      <Link to={`/movies/detail/${movie.id}`}>
+        <strong> {movie.title}</strong>
+      </Link>
       <small>
         Genre: {movie.genre} ({movie.year})
       </small>
       <small></small>
       <small>Rating: {movie.rating}</small>
       <small>Director: {movie.director}</small>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex gap-2">
         <Link className="small" to={`/movies/edit/${movie.id}`}>
           edit
         </Link>
+        |
         <a
           className="small"
           onClick={(event: SyntheticEvent) => {
