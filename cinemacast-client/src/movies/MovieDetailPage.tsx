@@ -5,6 +5,7 @@ import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
 import CreditTable from "../credits/CreditTable";
 import { creditAPI } from "../credits/CreditAPI";
+import { Credit } from "../credits/Credit";
 
 function MovieDetailPage() {
   const { id } = useParams<{ id: string }>();
