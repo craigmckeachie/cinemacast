@@ -7,6 +7,7 @@ import { movieAPI } from "./MovieAPI";
 function MovieForm() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
+  const movieId = Number(id);
 
   const {
     register,
@@ -14,10 +15,10 @@ function MovieForm() {
     formState: { errors },
   } = useForm<Movie>({
     defaultValues: async () => {
-      if (!id) {
+      if (!movieId) {
         return Promise.resolve(new Movie());
       } else {
-        return await movieAPI.find(id);
+        return await movieAPI.find(movieId);
       }
     },
   });

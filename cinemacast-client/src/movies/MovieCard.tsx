@@ -1,7 +1,5 @@
-import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { Movie } from "./Movie";
-import { movieAPI } from "./MovieAPI";
 import { SyntheticEvent } from "react";
 
 interface MovieCardProps {

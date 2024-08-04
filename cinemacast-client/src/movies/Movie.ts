@@ -1,5 +1,5 @@
 export class Movie {
-  id: string | undefined;
+  id: number | undefined;
   title = "";
   genre = "";
   year: number | undefined = undefined;

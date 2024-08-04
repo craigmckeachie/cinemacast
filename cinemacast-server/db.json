@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": "1",
+      "id": 1,
       "imdbID": "tt10872600",
       "title": "Spider-Man: No Way Home",
       "year": 2021,
@@ -11,7 +11,7 @@
       "budgetInMillions": 200
     },
     {
-      "id": "2",
+      "id": 2,
       "imdbID": "tt1160419",
       "title": "Dune",
       "year": 2021,
@@ -21,7 +21,7 @@
       "budgetInMillions": 165
     },
     {
-      "id": "3",
+      "id": 3,
       "imdbID": "tt1877830",
       "title": "The Batman",
       "year": 2022,
@@ -31,7 +31,7 @@
       "budgetInMillions": 185
     },
     {
-      "id": "4",
+      "id": 4,
       "imdbID": "tt2382320",
       "title": "No Time to Die",
       "year": 2021,
@@ -41,7 +41,7 @@
       "budgetInMillions": 250
     },
     {
-      "id": "5",
+      "id": 5,
       "imdbID": "tt10838180",
       "title": "The Matrix Resurrections",
       "year": 2021,
@@ -51,7 +51,7 @@
       "budgetInMillions": 190
     },
     {
-      "id": "6",
+      "id": 6,
       "imdbID": "tt9376612",
       "title": "Shang-Chi and the Legend of the Ten Rings",
       "year": 2021,
@@ -61,7 +61,7 @@
       "budgetInMillions": 150
     },
     {
-      "id": "7",
+      "id": 7,
       "imdbID": "tt2953050",
       "title": "Encanto",
       "year": 2021,
@@ -71,7 +71,7 @@
       "budgetInMillions": 120
     },
     {
-      "id": "8",
+      "id": 8,
       "imdbID": "tt8847712",
       "title": "The French Dispatch",
       "year": 2021,
@@ -81,7 +81,7 @@
       "budgetInMillions": 25
     },
     {
-      "id": "9",
+      "id": 9,
       "imdbID": "tt11286314",
       "title": "Don't Look Up",
       "year": 2021,
@@ -91,7 +91,7 @@
       "budgetInMillions": 75
     },
     {
-      "id": "10",
+      "id": 10,
       "imdbID": "tt6334354",
       "title": "The Suicide Squad",
       "year": 2021,
@@ -101,7 +101,7 @@
       "budgetInMillions": 185
     },
     {
-      "id": "11",
+      "id": 11,
       "imdbID": "tt6264654",
       "title": "Free Guy",
       "year": 2021,
@@ -111,7 +111,7 @@
       "budgetInMillions": 100
     },
     {
-      "id": "12",
+      "id": 12,
       "imdbID": "tt3228774",
       "title": "Cruella",
       "year": 2021,
@@ -121,7 +121,7 @@
       "budgetInMillions": 100
     },
     {
-      "id": "13",
+      "id": 13,
       "imdbID": "tt9032400",
       "title": "Eternals",
       "year": 2021,
@@ -131,7 +131,7 @@
       "budgetInMillions": 200
     },
     {
-      "id": "14",
+      "id": 14,
       "imdbID": "tt8332922",
       "title": "A Quiet Place Part II",
       "year": 2021,
@@ -141,7 +141,7 @@
       "budgetInMillions": 61
     },
     {
-      "id": "15",
+      "id": 15,
       "imdbID": "tt3480822",
       "title": "Black Widow",
       "year": 2021,
@@ -151,7 +151,7 @@
       "budgetInMillions": 200
     },
     {
-      "id": "16",
+      "id": 16,
       "imdbID": "tt0870154",
       "title": "Jungle Cruise",
       "year": 2021,
@@ -161,7 +161,7 @@
       "budgetInMillions": 200
     },
     {
-      "id": "17",
+      "id": 17,
       "imdbID": "tt4513678",
       "title": "Ghostbusters: Afterlife",
       "year": 2021,
@@ -171,7 +171,7 @@
       "budgetInMillions": 75
     },
     {
-      "id": "18",
+      "id": 18,
       "imdbID": "tt12801262",
       "title": "Luca",
       "year": 2021,
@@ -181,7 +181,7 @@
       "budgetInMillions": 50
     },
     {
-      "id": "19",
+      "id": 19,
       "imdbID": "tt1321510",
       "title": "In the Heights",
       "year": 2021,
@@ -191,7 +191,7 @@
       "budgetInMillions": 55
     },
     {
-      "id": "20",
+      "id": 20,
       "imdbID": "tt11214590",
       "title": "House of Gucci",
       "year": 2021,
@@ -201,234 +201,252 @@
       "budgetInMillions": 75
     },
     {
-      "id": "21",
-      "title": "The Killers",
+      "id": 21,
+      "title": "The Killer",
       "genre": "Drama",
-      "year": 2024,
+      "year": 2022,
       "rating": 8,
-      "director": "",
+      "director": "Ron Howard",
       "budgetInMillions": 2
+    },
+    {
+      "id": 22,
+      "title": "The Hangover",
+      "genre": "Comedy",
+      "year": 2012,
+      "rating": 6,
+      "director": "Miral Sims",
+      "budgetInMillions": 10
+    },
+    {
+      "title": "Chat About It",
+      "genre": "Animation",
+      "year": 2022,
+      "rating": 4.1,
+      "director": "Sam Altman",
+      "budgetInMillions": 30,
+      "id": 23
     }
   ],
   "actors": [
     {
-      "id": "1",
+      "id": 1,
       "imdbID": "nm4043618",
       "name": "Tom Holland"
     },
     {
-      "id": "2",
+      "id": 2,
       "imdbID": "nm1083271",
       "name": "Zendaya"
     },
     {
-      "id": "3",
+      "id": 3,
       "imdbID": "nm0000138",
       "name": "Timothée Chalamet"
     },
     {
-      "id": "4",
+      "id": 4,
       "imdbID": "nm0001876",
       "name": "Rebecca Ferguson"
     },
     {
-      "id": "5",
+      "id": 5,
       "imdbID": "nm2394794",
       "name": "Robert Pattinson"
     },
     {
-      "id": "6",
+      "id": 6,
       "imdbID": "nm1226817",
       "name": "Zoë Kravitz"
     },
     {
-      "id": "7",
+      "id": 7,
       "imdbID": "nm0000296",
       "name": "Daniel Craig"
     },
     {
-      "id": "8",
+      "id": 8,
       "imdbID": "nm0654110",
       "name": "Rami Malek"
     },
     {
-      "id": "9",
+      "id": 9,
       "imdbID": "nm0908094",
       "name": "Keanu Reeves"
     },
     {
-      "id": "10",
+      "id": 10,
       "imdbID": "nm0000246",
       "name": "Carrie-Anne Moss"
     },
     {
-      "id": "11",
+      "id": 11,
       "imdbID": "nm5124257",
       "name": "Simu Liu"
     },
     {
-      "id": "12",
+      "id": 12,
       "imdbID": "nm1128026",
       "name": "Awkwafina"
     },
     {
-      "id": "13",
+      "id": 13,
       "imdbID": "nm0662722",
       "name": "Stephanie Beatriz"
     },
     {
-      "id": "14",
+      "id": 14,
       "imdbID": "nm1832688",
       "name": "Lin-Manuel Miranda"
     },
     {
-      "id": "15",
+      "id": 15,
       "imdbID": "nm0005562",
       "name": "Benicio Del Toro"
     },
     {
-      "id": "16",
+      "id": 16,
       "imdbID": "nm1172478",
       "name": "Adrien Brody"
     },
     {
-      "id": "17",
+      "id": 17,
       "imdbID": "nm0000093",
       "name": "Leonardo DiCaprio"
     },
     {
-      "id": "18",
+      "id": 18,
       "imdbID": "nm0000192",
       "name": "Jennifer Lawrence"
     },
     {
-      "id": "19",
+      "id": 19,
       "imdbID": "nm1641117",
       "name": "Margot Robbie"
     },
     {
-      "id": "20",
+      "id": 20,
       "imdbID": "nm0005377",
       "name": "Idris Elba"
     }
   ],
   "credits": [
     {
-      "id": "1",
+      "id": 1,
       "movieId": 1,
       "actorId": 1,
       "role": "Peter Parker / Spider-Man"
     },
     {
-      "id": "2",
+      "id": 2,
       "movieId": 1,
       "actorId": 2,
       "role": "MJ"
     },
     {
-      "id": "3",
+      "id": 3,
       "movieId": 2,
       "actorId": 3,
       "role": "Paul Atreides"
     },
     {
-      "id": "4",
+      "id": 4,
       "movieId": 2,
       "actorId": 4,
       "role": "Lady Jessica"
     },
     {
-      "id": "5",
+      "id": 5,
       "movieId": 3,
       "actorId": 5,
       "role": "Bruce Wayne / Batman"
     },
     {
-      "id": "6",
+      "id": 6,
       "movieId": 3,
       "actorId": 6,
       "role": "Selina Kyle / Catwoman"
     },
     {
-      "id": "7",
+      "id": 7,
       "movieId": 4,
       "actorId": 7,
       "role": "James Bond"
     },
     {
-      "id": "8",
+      "id": 8,
       "movieId": 4,
       "actorId": 8,
       "role": "Lyutsifer Safin"
     },
     {
-      "id": "9",
+      "id": 9,
       "movieId": 5,
       "actorId": 9,
       "role": "Neo"
     },
     {
-      "id": "10",
+      "id": 10,
       "movieId": 5,
       "actorId": 10,
       "role": "Trinity"
     },
     {
-      "id": "11",
+      "id": 11,
       "movieId": 6,
       "actorId": 11,
       "role": "Shang-Chi"
     },
     {
-      "id": "12",
+      "id": 12,
       "movieId": 6,
       "actorId": 12,
       "role": "Katy"
     },
     {
-      "id": "13",
+      "id": 13,
       "movieId": 7,
       "actorId": 13,
       "role": "Mirabel"
     },
     {
-      "id": "14",
+      "id": 14,
       "movieId": 7,
       "actorId": 14,
       "role": "Bruno"
     },
     {
-      "id": "15",
+      "id": 15,
       "movieId": 8,
       "actorId": 15,
       "role": "Moses Rosenthaler"
     },
     {
-      "id": "16",
+      "id": 16,
       "movieId": 8,
       "actorId": 16,
       "role": "Julian Cadazio"
     },
     {
-      "id": "17",
+      "id": 17,
       "movieId": 9,
       "actorId": 17,
       "role": "Dr. Randall Mindy"
     },
     {
-      "id": "18",
+      "id": 18,
       "movieId": 9,
       "actorId": 18,
       "role": "Kate Dibiasky"
     },
     {
-      "id": "19",
+      "id": 19,
       "movieId": 10,
       "actorId": 19,
       "role": "Harley Quinn"
     },
     {
-      "id": "20",
+      "id": 20,
       "movieId": 10,
       "actorId": 20,
       "role": "Bloodsport"

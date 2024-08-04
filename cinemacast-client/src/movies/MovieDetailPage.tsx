@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
 
 function MovieDetailPage() {
-  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
+  const movieId = Number(id);
   const [movie, setMovie] = useState<Movie | undefined>(undefined);
   const [busy, setBusy] = useState(false);
 
   async function loadMovie() {
     try {
-      if (!id) return;
+      if (!movieId) return;
       setBusy(true);
-      const data = await movieAPI.find(id);
+      const data = await movieAPI.find(movieId);
       setMovie(data);
     } catch (error: any) {
       toast.error(error.message);
@@ -77,13 +77,13 @@ function MovieDetailPage() {
                   </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Tom Cruise</td>
-                        <td>Ethan Hunt</td>
-                        <td>
-                            <Link to={'/movies/detail/${movie.id}/credit/1'}>edit</Link>
-                        </td>
-                    </tr>
+                  <tr>
+                    <td>Tom Cruise</td>
+                    <td>Ethan Hunt</td>
+                    <td>
+                      <Link to={"/movies/detail/${movie.id}/credit/1"}>edit</Link>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </section>
