@@ -44,7 +44,7 @@ function MovieList() {
           </div>
         </section>
       )}
-      <section className="d-flex flex-wrap gap-4">
+      <section className="d-flex flex-wrap gap-4 list">
         {movies.map((movie) => (
           <MovieCard movie={movie} onRemove={remove} />
         ))}

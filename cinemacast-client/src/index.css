@@ -14,6 +14,12 @@ a {
   --bs-nav-pills-link-active-bg: #ff7916;
 }
 
+.list .card:hover {
+  background-color: var(--bs-tertiary-bg);
+  transform: scale(1.025);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+}
+
 /* 
 .nav {
   --bs-nav-link-padding-y: 0.6rem;

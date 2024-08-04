@@ -47,24 +47,47 @@ function MovieDetailPage() {
           </section>
         )}
         {movie && (
-          <section className="card d-flex flex-row gap-5 p-4 w-100 bg-body-tertiary">
-            <dl className="">
-              <dt>Title</dt>
-              <dd>{movie.title}</dd>
-              <dt>Genre</dt>
-              <dd>{movie.genre}</dd>
-            </dl>
-            <dl>
-              <dt>Year</dt>
-              <dd>{movie.year}</dd>
-              <dt>Director</dt>
-              <dd>{movie.director}</dd>
-            </dl>
-            <dl>
-              <dt>Rating</dt>
-              <dd>{movie.rating}</dd>
-            </dl>
-          </section>
+          <>
+            <section className="card d-flex flex-row gap-5 p-4 w-100 bg-body-tertiary">
+              <dl className="">
+                <dt>Title</dt>
+                <dd>{movie.title}</dd>
+                <dt>Genre</dt>
+                <dd>{movie.genre}</dd>
+              </dl>
+              <dl>
+                <dt>Year</dt>
+                <dd>{movie.year}</dd>
+                <dt>Director</dt>
+                <dd>{movie.director}</dd>
+              </dl>
+              <dl>
+                <dt>Rating</dt>
+                <dd>{movie.rating}</dd>
+              </dl>
+            </section>
+            <section className="card p-4 mt-4 w-100">
+              <h5>Cast</h5>
+              <table className="table table-hover table-light w-50">
+                <thead>
+                  <tr>
+                    <th>Actor</th>
+                    <th>Role</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tom Cruise</td>
+                        <td>Ethan Hunt</td>
+                        <td>
+                            <Link to={'/movies/detail/${movie.id}/credit/1'}>edit</Link>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            </section>
+          </>
         )}
       </>
     </>
