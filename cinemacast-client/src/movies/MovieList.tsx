@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { movieAPI } from "./MovieAPI";
 import { Movie } from "./Movie";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import MovieCard from "./MovieCard";
 
 function MovieList() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -24,6 +24,17 @@ function MovieList() {
     loadMovies();
   }, []);
 
+  async function remove(movie: Movie) {
+    if (confirm("Are you sure you want to delete this Movie?")) {
+      if (movie.id) {
+        await movieAPI.delete(movie.id);
+        let updatedMovies = movies.filter((m) => m.id !== movie.id);
+        setMovies(updatedMovies);
+        toast.success("Successfully deleted.");
+      }
+    }
+  }
+
   return (
     <>
       {busy && (
@@ -35,34 +46,7 @@ function MovieList() {
       )}
       <section className="d-flex flex-wrap gap-4">
         {movies.map((movie) => (
-          <article className="card p-4" key={movie.id}>
-            <strong>{movie.title}</strong>
-            <small>
-              Genre: {movie.genre} ({movie.year})
-            </small>
-            <small></small>
-            <small>Rating: {movie.rating}</small>
-            <small>Director: {movie.director}</small>
-            <div className="d-flex justify-content-between">
-              <Link className="small" to={`/movies/edit/${movie.id}`}>edit</Link>
-              <a
-                className="small"
-                onClick={async (event) => {
-                  event.preventDefault();
-                  if (confirm("Are you sure you want to delete this Movie?")) {
-                    if (movie.id) {
-                      await movieAPI.delete(movie.id);
-                      let updatedMovies = movies.filter((m) => m.id !== movie.id);
-                      setMovies(updatedMovies);
-                      toast.success("Successfully deleted.");
-                    }
-                  }
-                }}
-              >
-                delete
-              </a>
-            </div>
-          </article>
+          <MovieCard movie={movie} onRemove={remove} />
         ))}
       </section>
     </>

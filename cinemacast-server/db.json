@@ -208,15 +208,6 @@
       "rating": 8,
       "director": "",
       "budgetInMillions": 2
-    },
-    {
-      "id": "22",
-      "title": "The Hangover",
-      "genre": "Comedy",
-      "year": 2012,
-      "rating": 6,
-      "director": "Miral Sims",
-      "budgetInMillions": 10
     }
   ],
   "actors": [
