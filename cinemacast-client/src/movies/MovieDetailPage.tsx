@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
 import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
+import CreditTable from "../credits/CreditTable";
 
 function MovieDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -14,7 +15,7 @@ function MovieDetailPage() {
     try {
       if (!movieId) return;
       setBusy(true);
-      const data = await movieAPI.find(movieId);
+      const data = await movieAPI.findWithDetails(movieId);
       setMovie(data);
     } catch (error: any) {
       toast.error(error.message);
@@ -68,24 +69,7 @@ function MovieDetailPage() {
             </section>
             <section className="card p-4 mt-4 w-100">
               <h5>Cast</h5>
-              <table className="table table-hover table-light w-50">
-                <thead>
-                  <tr>
-                    <th>Actor</th>
-                    <th>Role</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Tom Cruise</td>
-                    <td>Ethan Hunt</td>
-                    <td>
-                      <Link to={"/movies/detail/${movie.id}/credit/1"}>edit</Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <CreditTable movie={movie} />
             </section>
           </>
         )}

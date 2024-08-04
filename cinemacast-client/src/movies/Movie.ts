@@ -1,3 +1,5 @@
+import { Credit } from "../credits/Credit";
+
 export class Movie {
   id: number | undefined;
   title = "";
@@ -6,6 +8,7 @@ export class Movie {
   rating: number | undefined = undefined;
   director = "";
   budgetInMillions: number | undefined = undefined;
+  credits: Credit[] | undefined;
 
   get isNew(): boolean {
     return this.id === undefined;
@@ -20,5 +23,6 @@ export class Movie {
     if (initializer.rating) this.rating = initializer.rating;
     if (initializer.director) this.director = initializer.director;
     if (initializer.budgetInMillions) this.budgetInMillions = initializer.budgetInMillions;
+    if (initializer.credits) this.credits = initializer.credits;
   }
 }

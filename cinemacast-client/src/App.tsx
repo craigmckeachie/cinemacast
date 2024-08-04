@@ -83,11 +83,6 @@ function App() {
                     Actors
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
-                    Credits
-                  </a>
-                </li>
               </ul>
             </nav>
           </aside>
