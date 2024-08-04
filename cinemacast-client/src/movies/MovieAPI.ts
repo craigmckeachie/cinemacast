@@ -36,7 +36,7 @@ export const movieAPI = {
       .then(parseJSON);
   },
 
-  delete(id: number) {
+  delete(id: string) {
     return fetch(`${url}/${id}`, { method: "DELETE" }).then(checkStatus);
   },
 };

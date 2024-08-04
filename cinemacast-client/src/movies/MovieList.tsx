@@ -43,7 +43,25 @@ function MovieList() {
             <small></small>
             <small>Rating: {movie.rating}</small>
             <small>Director: {movie.director}</small>
-            <Link to={`/movies/edit/${movie.id}`}>edit</Link>
+            <div className="d-flex justify-content-between">
+              <Link className="small" to={`/movies/edit/${movie.id}`}>edit</Link>
+              <a
+                className="small"
+                onClick={async (event) => {
+                  event.preventDefault();
+                  if (confirm("Are you sure you want to delete this Movie?")) {
+                    if (movie.id) {
+                      await movieAPI.delete(movie.id);
+                      let updatedMovies = movies.filter((m) => m.id !== movie.id);
+                      setMovies(updatedMovies);
+                      toast.success("Successfully deleted.");
+                    }
+                  }
+                }}
+              >
+                delete
+              </a>
+            </div>
           </article>
         ))}
       </section>
