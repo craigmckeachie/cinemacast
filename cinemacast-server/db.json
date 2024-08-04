@@ -459,18 +459,6 @@
       "movieId": 10,
       "actorId": 20,
       "role": "Bloodsport"
-    },
-    {
-      "movieId": 24,
-      "actorId": "7",
-      "role": "James Rons",
-      "id": 25
-    },
-    {
-      "movieId": 24,
-      "actorId": "13",
-      "role": "Jane Renaldez",
-      "id": 26
     }
   ]
 }

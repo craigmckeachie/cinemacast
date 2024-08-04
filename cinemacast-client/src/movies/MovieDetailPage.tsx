@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
 import CreditTable from "../credits/CreditTable";
+import { creditAPI } from "../credits/CreditAPI";
 
 function MovieDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -27,6 +28,19 @@ function MovieDetailPage() {
   useEffect(() => {
     loadMovie();
   }, []);
+
+  async function removeCredit(credit: Credit) {
+    if (confirm("Are you sure you want to delete this Movie?")) {
+      if (credit.id) {
+        await creditAPI.delete(credit.id);
+        toast.success("Successfully deleted.");
+        let updatedCredits = movie?.credits?.filter((c) => c.id !== credit.id);
+        if (movie) {
+          setMovie({ ...movie, credits: updatedCredits } as Movie);
+        }
+      }
+    }
+  }
 
   if (!movie) return null;
 
@@ -79,7 +93,7 @@ function MovieDetailPage() {
                   + add credit
                 </Link>
               </header>
-              <CreditTable movie={movie} />
+              <CreditTable movie={movie} onRemove={removeCredit} />
             </section>
           </>
         )}
