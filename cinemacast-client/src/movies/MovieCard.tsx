@@ -19,6 +19,9 @@ function MovieCard({ movie, onRemove }: MovieCardProps) {
       <small></small>
       <small>Rating: {movie.rating}</small>
       <small>Director: {movie.director}</small>
+      <small>
+        Budget: ${movie.budgetInMillions} {movie.budgetInMillions && "million"}
+      </small>
       <div className="d-flex gap-2">
         <Link className="small" to={`/movies/edit/${movie.id}`}>
           edit

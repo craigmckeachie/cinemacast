@@ -18,7 +18,7 @@
       "director": "Denis Villeneuve",
       "genre": "Sci-Fi",
       "rating": 8.1,
-      "budgetInMillions": 165
+      "budgetInMillions": 167
     },
     {
       "id": 3,
@@ -228,12 +228,12 @@
       "id": 23
     },
     {
-      "title": "fds",
+      "title": "The Pink Panther",
       "genre": "Comedy",
       "year": 1921,
       "rating": 1.1,
       "director": "Dan Harmon",
-      "budgetInMillions": 18,
+      "budgetInMillions": null,
       "id": 24
     }
   ],
@@ -485,6 +485,12 @@
       "actorId": "7",
       "role": "James Rons",
       "id": 25
+    },
+    {
+      "movieId": 24,
+      "actorId": "13",
+      "role": "Jane Renaldez",
+      "id": 26
     }
   ]
 }

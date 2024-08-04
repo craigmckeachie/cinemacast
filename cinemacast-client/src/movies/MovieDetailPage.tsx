@@ -65,6 +65,10 @@ function MovieDetailPage() {
               <dl>
                 <dt>Rating</dt>
                 <dd>{movie.rating}</dd>
+                <dt>Budget</dt>
+                <dd>
+                  ${movie.budgetInMillions} {movie.budgetInMillions && "million"}{" "}
+                </dd>
               </dl>
             </section>
             <section className="card p-4 mt-4 w-100">
