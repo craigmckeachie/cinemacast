@@ -19,7 +19,7 @@ function CreditTable({ movie, onRemove }: CreditTableProps) {
       </thead>
       <tbody>
         {movie.credits?.map((credit) => (
-          <tr>
+          <tr key={credit.id}>
             <td>{credit.actor?.name}</td>
             <td>{credit.role}</td>
             <td className="d-flex gap-2">

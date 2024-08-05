@@ -222,9 +222,9 @@
       "title": "Chat About It Again",
       "genre": "Animation",
       "year": 2022,
-      "rating": 4.1,
-      "director": "Sam Altman",
-      "budgetInMillions": 30,
+      "rating": 4.2,
+      "director": "Sam Altman Cates",
+      "budgetInMillions": 29,
       "id": 23
     },
     {
@@ -459,6 +459,28 @@
       "movieId": 10,
       "actorId": 20,
       "role": "Bloodsport"
+    },
+    {
+      "actorId": "16",
+      "role": "Mysterio",
+      "id": 21
+    },
+    {
+      "actorId": "12",
+      "role": "ddfd",
+      "id": 22
+    },
+    {
+      "movieId": 23,
+      "actorId": "16",
+      "role": "Thomas Kane",
+      "id": 23
+    },
+    {
+      "movieId": 23,
+      "actorId": "7",
+      "role": "ffds",
+      "id": 24
     }
   ]
 }

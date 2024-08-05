@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
 import CreditTable from "../credits/CreditTable";
@@ -8,8 +8,8 @@ import { creditAPI } from "../credits/CreditAPI";
 import { Credit } from "../credits/Credit";
 
 function MovieDetailPage() {
-  const { id } = useParams<{ id: string }>();
-  const movieId = Number(id);
+  const { movieId: movieIdAsString } = useParams<{ movieId: string }>();
+  const movieId = Number(movieIdAsString);
   const [movie, setMovie] = useState<Movie | undefined>(undefined);
   const [busy, setBusy] = useState(false);
 
@@ -95,6 +95,7 @@ function MovieDetailPage() {
                 </Link>
               </header>
               <CreditTable movie={movie} onRemove={removeCredit} />
+              <Outlet />
             </section>
           </>
         )}

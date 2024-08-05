@@ -19,7 +19,20 @@ let router = createBrowserRouter([
       { path: "movies", element: <MoviesPage /> },
       { path: "movies/create", element: <MovieCreatePage /> },
       { path: "movies/edit/:id", element: <MovieEditPage /> },
-      { path: "movies/detail/:id", element: <MovieDetailPage /> },
+      {
+        path: "movies/detail/:movieId",
+        element: <MovieDetailPage />,
+        // children: [
+        //   {
+        //     path: "credit/create",
+        //     element: <CreditCreatePage />,
+        //   },
+        //   {
+        //     path: "credit/edit/:creditId",
+        //     element: <CreditEditPage />,
+        //   },
+        // ],
+      },
       {
         path: "movies/detail/:movieId/credit/create",
         element: <CreditCreatePage />,

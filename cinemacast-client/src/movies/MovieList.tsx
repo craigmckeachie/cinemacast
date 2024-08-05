@@ -46,7 +46,7 @@ function MovieList() {
       )}
       <section className="d-flex flex-wrap gap-4 list">
         {movies.map((movie) => (
-          <MovieCard movie={movie} onRemove={remove} />
+          <MovieCard key={movie.id} movie={movie} onRemove={remove} />
         ))}
       </section>
     </>
