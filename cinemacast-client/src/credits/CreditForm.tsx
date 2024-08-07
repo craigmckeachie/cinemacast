@@ -40,7 +40,7 @@ function CreditForm() {
       } else {
         await creditAPI.put(credit);
       }
-      navigate(`/movies/detail/${movieId}`);
+      navigate(`/movies/detail/${movieId}?lastUpdated=${Date.now()}`);
     } catch (error: any) {
       toast.error(error.message);
     }
@@ -85,7 +85,10 @@ function CreditForm() {
 
       <div className="d-flex gap-2">
         <button className="btn btn-outline-primary">Save</button>
-        <Link className="btn btn-outline-secondary" to={`/movies/detail/${movieId}`}>
+        <Link
+          className="btn btn-outline-secondary"
+          to={`/movies/detail/${movieId}`}
+        >
           Cancel
         </Link>
       </div>

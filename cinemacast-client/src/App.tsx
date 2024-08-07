@@ -116,17 +116,17 @@ function App() {
             <Route path="/movies/create" element={<MovieCreatePage />} />
             <Route path="/movies/edit/:id" element={<MovieEditPage />} />
             <Route
-              path="/movies/detail/:movieId"
+              path="/movies/detail/:movieId/*"
               element={<MovieDetailPage />}
             />
-            <Route
-              path="movies/detail/:movieId/credit/create"
+            {/* <Route
+              path="/movies/detail/:movieId/credit/create"
               element={<CreditCreatePage />}
             />
             <Route
-              path="movies/detail/:movieId/credit/edit/:creditId"
+              path="/movies/detail/:movieId/credit/edit/:creditId"
               element={<CreditEditPage />}
-            />
+            /> */}
           </Routes>
         </section>
       </main>

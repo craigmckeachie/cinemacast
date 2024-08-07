@@ -1,14 +1,25 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { Link, Outlet, useParams } from "react-router-dom";
+import {
+  Link,
+  Route,
+  Routes,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { Movie } from "./Movie";
 import { movieAPI } from "./MovieAPI";
 import CreditTable from "../credits/CreditTable";
 import { creditAPI } from "../credits/CreditAPI";
 import { Credit } from "../credits/Credit";
+import CreditCreatePage from "../credits/CreditCreatePage";
+import CreditEditPage from "../credits/CreditEditPage";
 
 function MovieDetailPage() {
-  const { movieId: movieIdAsString } = useParams<{ movieId: string }>();
+  const { movieId: movieIdAsString } = useParams<{
+    movieId: string;
+  }>();
+  let [searchParams, ] = useSearchParams();
   const movieId = Number(movieIdAsString);
   const [movie, setMovie] = useState<Movie | undefined>(undefined);
   const [busy, setBusy] = useState(false);
@@ -28,7 +39,7 @@ function MovieDetailPage() {
 
   useEffect(() => {
     loadMovie();
-  }, []);
+  }, [searchParams.get("lastUpdated")]);
 
   async function removeCredit(credit: Credit) {
     if (confirm("Are you sure you want to delete this Movie?")) {
@@ -49,7 +60,10 @@ function MovieDetailPage() {
     <>
       <nav className="d-flex justify-content-between pe-2">
         <h4>Movie</h4>
-        <Link to={`/movies/edit/${movie.id}`} className="btn btn-outline-primary">
+        <Link
+          to={`/movies/edit/${movie.id}`}
+          className="btn btn-outline-primary"
+        >
           edit movie
         </Link>
       </nav>
@@ -82,7 +96,8 @@ function MovieDetailPage() {
                 <dd>{movie.rating}</dd>
                 <dt>Budget</dt>
                 <dd>
-                  ${movie.budgetInMillions} {movie.budgetInMillions && "million"}{" "}
+                  ${movie.budgetInMillions}{" "}
+                  {movie.budgetInMillions && "million"}{" "}
                 </dd>
               </dl>
             </section>
@@ -90,12 +105,21 @@ function MovieDetailPage() {
               <header className="d-flex justify-content-between">
                 <h5>Cast</h5>
 
-                <Link className="btn btn-outline-primary" to={`/movies/detail/${movie.id}/credit/create`}>
+                <Link
+                  className="btn btn-outline-primary"
+                  to={`/movies/detail/${movie.id}/credit/create`}
+                >
                   + add credit
                 </Link>
               </header>
               <CreditTable movie={movie} onRemove={removeCredit} />
-              <Outlet />
+              <Routes>
+                <Route path="credit/create" element={<CreditCreatePage />} />
+                <Route
+                  path="credit/edit/:creditId"
+                  element={<CreditEditPage />}
+                />
+              </Routes>
             </section>
           </>
         )}

@@ -228,7 +228,7 @@
       "id": 23
     },
     {
-      "title": "The Pink Panther",
+      "title": "The Pink Panther's Revenge",
       "genre": "Comedy",
       "year": 1921,
       "rating": 1.1,
@@ -473,7 +473,7 @@
     {
       "movieId": 23,
       "actorId": "16",
-      "role": "Thomas Kane",
+      "role": "Thomas Kasd",
       "id": 23
     },
     {
@@ -481,6 +481,30 @@
       "actorId": "7",
       "role": "ffds",
       "id": 24
+    },
+    {
+      "movieId": 24,
+      "actorId": "10",
+      "role": "Joan Myers",
+      "id": 25
+    },
+    {
+      "movieId": 24,
+      "actorId": "9",
+      "role": "Neo",
+      "id": 26
+    },
+    {
+      "movieId": 23,
+      "actorId": "20",
+      "role": "test it out",
+      "id": 27
+    },
+    {
+      "movieId": 23,
+      "actorId": "16",
+      "role": "3",
+      "id": 28
     }
   ]
 }
