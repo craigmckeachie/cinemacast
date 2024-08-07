@@ -1,13 +1,29 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
+import MoviesPage from "./movies/MoviesPage";
+import MovieCreatePage from "./movies/MovieCreatePage";
+import MovieEditPage from "./movies/MovieEditPage";
+import MovieDetailPage from "./movies/MovieDetailPage";
+import CreditCreatePage from "./credits/CreditCreatePage";
+import CreditEditPage from "./credits/CreditEditPage";
 
 function App() {
   return (
-    <>
+    <Router>
       <header className="container-fluid px-4 py-4 bg-body-tertiary navbar border-bottom">
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="73" height="49" fill="none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="73"
+            height="49"
+            fill="none"
+          >
             <path
               fill="#68DBFF"
               d="M46.868 24c0 12.426-10.074 22.5-22.5 22.5-12.427 0-22.5-10.074-22.5-22.5S11.94 1.5 24.368 1.5c12.426 0 22.5 10.074 22.5 22.5Z"
@@ -34,7 +50,10 @@ function App() {
             Audrey Madison
           </summary>
           <div className="d-flex justify-content-end">
-            <ul className="dropdown-menu bg-body-tertiary" style={{ display: "revert" }}>
+            <ul
+              className="dropdown-menu bg-body-tertiary"
+              style={{ display: "revert" }}
+            >
               <li>
                 <a className="dropdown-item" href="#">
                   Profile
@@ -69,14 +88,17 @@ function App() {
             },
           }}
         />
-        <section className="bg-body-tertiary vh-100 p-4  border-end" style={{ width: "12rem" }}>
+        <section
+          className="bg-body-tertiary vh-100 p-4  border-end"
+          style={{ width: "12rem" }}
+        >
           <aside className="">
             <nav>
               <ul className="nav nav-pills flex-column">
                 <li className="nav-item">
-                  <Link to={"/movies"} className="nav-link active" aria-current="page">
+                  <NavLink to={"/movies"} className="nav-link ">
                     Movies
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link">
@@ -88,10 +110,27 @@ function App() {
           </aside>
         </section>
         <section className="p-4 w-100">
-          <Outlet />
+          <Routes>
+            <Route path="/" />
+            <Route path="/movies" element={<MoviesPage />} />
+            <Route path="/movies/create" element={<MovieCreatePage />} />
+            <Route path="/movies/edit/:id" element={<MovieEditPage />} />
+            <Route
+              path="/movies/detail/:movieId"
+              element={<MovieDetailPage />}
+            />
+            <Route
+              path="movies/detail/:movieId/credit/create"
+              element={<CreditCreatePage />}
+            />
+            <Route
+              path="movies/detail/:movieId/credit/edit/:creditId"
+              element={<CreditEditPage />}
+            />
+          </Routes>
         </section>
       </main>
-    </>
+    </Router>
   );
 }
 
