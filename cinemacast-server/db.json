@@ -514,7 +514,19 @@
     }
   ],
   "users": [
-    { "id": "1", "username": "jamestoddsmith", "password": "imbad" },
-    { "id": "2", "username": "osheajackson", "password": "goodday" }
+    {
+      "id": "1",
+      "username": "jamestoddsmith",
+      "password": "imbad",
+      "firstName": "James Todd",
+      "lastname": "Smith"
+    },
+    {
+      "id": "2",
+      "username": "osheajackson",
+      "password": "goodday",
+      "firstName": "O'Shea",
+      "lastname": "Jackson"
+    }
   ]
 }
