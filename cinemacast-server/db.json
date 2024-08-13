@@ -505,6 +505,16 @@
       "actorId": "16",
       "role": "3",
       "id": 28
+    },
+    {
+      "movieId": 23,
+      "actorId": "18",
+      "role": "Finn",
+      "id": 29
     }
+  ],
+  "users": [
+    { "id": "1", "username": "jamestoddsmith", "password": "imbad" },
+    { "id": "2", "username": "osheajackson", "password": "goodday" }
   ]
 }
