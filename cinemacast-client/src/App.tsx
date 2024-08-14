@@ -16,6 +16,7 @@ import { useState } from "react";
 import { User } from "./users/User";
 import { UserContext } from "./users/UserContext";
 import SignInPage from "./account/SignInPage";
+import ActorsPage from "./actors/ActorsPage";
 
 function getPersistedUser() {
   const userAsJSON = localStorage.getItem("user");
@@ -115,9 +116,9 @@ function App() {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a href="#" className="nav-link">
+                    <NavLink to="/actors" className="nav-link ">
                       Actors
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </nav>
@@ -134,6 +135,7 @@ function App() {
                 path="/movies/detail/:movieId/*"
                 element={<MovieDetailPage />}
               />
+              <Route path="/actors" element={<ActorsPage />} />
               {/* <Route
               path="/movies/detail/:movieId/credit/create"
               element={<CreditCreatePage />}

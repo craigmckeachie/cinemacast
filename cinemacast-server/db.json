@@ -219,22 +219,22 @@
       "budgetInMillions": 10
     },
     {
-      "title": "Chat About It Again",
-      "genre": "Animation",
-      "year": 2022,
-      "rating": 4.2,
-      "director": "Sam Altman Cates",
-      "budgetInMillions": 29,
-      "id": 23
-    },
-    {
-      "title": "The Pink Panther's Revenge",
+      "title": "The Pink Panther",
       "genre": "Comedy",
       "year": 1921,
       "rating": 1.1,
       "director": "Dan Harmon",
       "budgetInMillions": null,
       "id": 24
+    },
+    {
+      "title": "Deadpool & Wolverine",
+      "genre": "Comedy",
+      "year": 2024,
+      "rating": 8.1,
+      "director": " Shawn Levy",
+      "budgetInMillions": 200,
+      "id": 25
     }
   ],
   "actors": [
@@ -469,64 +469,6 @@
       "actorId": "12",
       "role": "ddfd",
       "id": 22
-    },
-    {
-      "movieId": 23,
-      "actorId": "16",
-      "role": "Thomas Kasd",
-      "id": 23
-    },
-    {
-      "movieId": 23,
-      "actorId": "7",
-      "role": "ffds",
-      "id": 24
-    },
-    {
-      "movieId": 24,
-      "actorId": "10",
-      "role": "Joan Myers",
-      "id": 25
-    },
-    {
-      "movieId": 24,
-      "actorId": "9",
-      "role": "Neo",
-      "id": 26
-    },
-    {
-      "movieId": 23,
-      "actorId": "20",
-      "role": "test it out",
-      "id": 27
-    },
-    {
-      "movieId": 23,
-      "actorId": "16",
-      "role": "3",
-      "id": 28
-    },
-    {
-      "movieId": 23,
-      "actorId": "18",
-      "role": "Finn",
-      "id": 29
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "username": "jamestoddsmith",
-      "password": "imbad",
-      "firstName": "James Todd",
-      "lastname": "Smith"
-    },
-    {
-      "id": "2",
-      "username": "osheajackson",
-      "password": "goodday",
-      "firstName": "O'Shea",
-      "lastname": "Jackson"
     }
   ]
 }

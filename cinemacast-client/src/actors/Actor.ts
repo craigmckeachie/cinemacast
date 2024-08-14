@@ -14,3 +14,5 @@ export class Actor {
     if (initializer.id) this.imdbID = initializer.imdbID;
   }
 }
+
+
