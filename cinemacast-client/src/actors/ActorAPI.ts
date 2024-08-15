@@ -1,12 +1,19 @@
-import { BASE_URL, checkStatus, delay, parseJSON } from "../utility/fetchUtilities";
+import {
+  BASE_URL,
+  checkStatus,
+  delay,
+  parseJSON,
+} from "../utility/fetchUtilities";
 import { Actor } from "./Actor";
 
 let url = `${BASE_URL}/actors`;
 
-
 export const actorAPI = {
   list(): Promise<Actor[]> {
-    return fetch(`${url}?_sort=name&_order=asc`).then(delay(600)).then(checkStatus).then(parseJSON);
+    return fetch(`${url}?_sort=name&_order=asc`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON);
   },
 
   find(id: number): Promise<Actor> {
