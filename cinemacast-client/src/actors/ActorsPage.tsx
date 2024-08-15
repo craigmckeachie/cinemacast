@@ -7,7 +7,7 @@ function ActorsPage() {
       <header className="d-flex justify-content-between">
         <h4>Actors</h4>
         <Link
-          to={"/actors/create"}
+          to="/actors/create"
           role="button"
           className="btn btn-outline-secondary"
         >
@@ -16,7 +16,7 @@ function ActorsPage() {
       </header>
 
       <hr />
-      <ActorList />
+      <ActorList /> 
     </>
   );
 }
