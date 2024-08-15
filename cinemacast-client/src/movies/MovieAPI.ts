@@ -11,7 +11,7 @@ function replacer(key: string, value: any) {
 
 export const movieAPI = {
   list(): Promise<Movie[]> {
-    return fetch(url).then(delay(400)).then(checkStatus).then(parseJSON);
+    return fetch(url).then(delay(200)).then(checkStatus).then(parseJSON);
   },
 
   find(id: number): Promise<Movie> {

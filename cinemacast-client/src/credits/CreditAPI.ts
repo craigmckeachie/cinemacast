@@ -15,7 +15,7 @@ export const creditAPI = {
 
   listByMovie(movieId: number): Promise<Credit[]> {
     let currentUrl = `${BASE_URL}/movies/${movieId}/credits?_expand=actor`;
-    return fetch(currentUrl).then(delay(400)).then(checkStatus).then(parseJSON);
+    return fetch(currentUrl).then(checkStatus).then(parseJSON);
   },
 
   find(id: number): Promise<Credit> {
