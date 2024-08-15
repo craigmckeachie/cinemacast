@@ -241,102 +241,182 @@
     {
       "id": 1,
       "imdbID": "nm4043618",
-      "name": "Tom Holland"
+      "name": "Tom Holland",
+      "birthDate": "1996-06-01",
+      "nationality": "British",
+      "gender": "Male",
+      "awards": ["BAFTA Rising Star Award"]
     },
     {
       "id": 2,
       "imdbID": "nm1083271",
-      "name": "Zendaya"
+      "name": "Zendaya",
+      "birthDate": "1996-09-01",
+      "nationality": "American",
+      "gender": "Female",
+      "awards": ["Primetime Emmy Award"]
     },
     {
       "id": 3,
       "imdbID": "nm0000138",
-      "name": "Timothée Chalamet"
+      "name": "Timothée Chalamet",
+      "birthDate": "1995-12-27",
+      "nationality": "American",
+      "gender": "Male",
+      "awards": ["Academy Award Nominee"]
     },
     {
       "id": 4,
       "imdbID": "nm0001876",
-      "name": "Rebecca Ferguson"
+      "name": "Rebecca Ferguson",
+      "birthDate": "1983-10-19",
+      "nationality": "Swedish",
+      "gender": "Female",
+      "awards": ["Critics' Choice Television Award Nominee"]
     },
     {
       "id": 5,
       "imdbID": "nm2394794",
-      "name": "Robert Pattinson"
+      "name": "Robert Pattinson",
+      "birthDate": "1986-05-13",
+      "nationality": "British",
+      "gender": "Male",
+      "awards": ["Hollywood Film Award"]
     },
     {
       "id": 6,
       "imdbID": "nm1226817",
-      "name": "Zoë Kravitz"
+      "name": "Zoë Kravitz",
+      "birthDate": "1988-12-01",
+      "nationality": "American",
+      "gender": "Female",
+      "awards": ["Black Reel Award"]
     },
     {
       "id": 7,
       "imdbID": "nm0000296",
-      "name": "Daniel Craig"
+      "name": "Daniel Craig",
+      "birthDate": "1968-03-02",
+      "nationality": "British",
+      "gender": "Male",
+      "awards": ["Golden Globe Award"]
     },
     {
       "id": 8,
       "imdbID": "nm0654110",
-      "name": "Rami Malek"
+      "name": "Rami Malek",
+      "birthDate": "1981-05-12",
+      "nationality": "American",
+      "gender": "Male",
+      "awards": ["Academy Award"]
     },
     {
       "id": 9,
       "imdbID": "nm0908094",
-      "name": "Keanu Reeves"
+      "name": "Keanu Reeves",
+      "birthDate": "1964-09-02",
+      "nationality": "Canadian",
+      "gender": "Male",
+      "awards": ["MTV Movie Award"]
     },
     {
       "id": 10,
       "imdbID": "nm0000246",
-      "name": "Carrie-Anne Moss"
+      "name": "Carrie-Anne Moss",
+      "birthDate": "1967-08-21",
+      "nationality": "Canadian",
+      "gender": "Female",
+      "awards": ["Independent Spirit Award"]
     },
     {
       "id": 11,
       "imdbID": "nm5124257",
-      "name": "Simu Liu"
+      "name": "Simu Liu",
+      "birthDate": "1989-04-19",
+      "nationality": "Canadian",
+      "gender": "Male",
+      "awards": ["People's Choice Award"]
     },
     {
       "id": 12,
       "imdbID": "nm1128026",
-      "name": "Awkwafina"
+      "name": "Awkwafina",
+      "birthDate": "1988-06-02",
+      "nationality": "American",
+      "gender": "Female",
+      "awards": ["Golden Globe Award"]
     },
     {
       "id": 13,
       "imdbID": "nm0662722",
-      "name": "Stephanie Beatriz"
+      "name": "Stephanie Beatriz",
+      "birthDate": "1981-02-10",
+      "nationality": "American",
+      "gender": "Female",
+      "awards": ["Annie Award"]
     },
     {
       "id": 14,
       "imdbID": "nm1832688",
-      "name": "Lin-Manuel Miranda"
+      "name": "Lin-Manuel Miranda",
+      "birthDate": "1980-01-16",
+      "nationality": "American",
+      "gender": "Male",
+      "awards": ["Pulitzer Prize", "Tony Award"]
     },
     {
       "id": 15,
       "imdbID": "nm0005562",
-      "name": "Benicio Del Toro"
+      "name": "Benicio Del Toro",
+      "birthDate": "1967-02-19",
+      "nationality": "Puerto Rican",
+      "gender": "Male",
+      "awards": ["Academy Award", "BAFTA Award"]
     },
     {
       "id": 16,
       "imdbID": "nm1172478",
-      "name": "Adrien Brody"
+      "name": "Adrien Brody",
+      "birthDate": "1973-04-14",
+      "nationality": "American",
+      "gender": "Male",
+      "awards": ["Academy Award", "César Award"]
     },
     {
       "id": 17,
       "imdbID": "nm0000093",
-      "name": "Leonardo DiCaprio"
+      "name": "Leonardo DiCaprio",
+      "birthDate": "1974-11-11",
+      "nationality": "American",
+      "gender": "Male",
+      "awards": ["Academy Award", "Golden Globe Award"]
     },
     {
       "id": 18,
       "imdbID": "nm0000192",
-      "name": "Jennifer Lawrence"
+      "name": "Jennifer Lawrence",
+      "birthDate": "1990-08-15",
+      "nationality": "American",
+      "gender": "Female",
+      "awards": ["Academy Award", "Golden Globe Award"]
     },
     {
       "id": 19,
       "imdbID": "nm1641117",
-      "name": "Margot Robbie"
+      "name": "Margot Robbie",
+      "birthDate": "1990-07-02",
+      "nationality": "Australian",
+      "gender": "Female",
+      "awards": ["Critics' Choice Movie Award", "BAFTA Award"]
     },
     {
       "id": 20,
       "imdbID": "nm0005377",
-      "name": "Idris Elba"
+      "name": "Idris Elba",
+      "birthDate": "1972-09-06",
+      "nationality": "British",
+      "gender": "Male",
+      "awards": ["Golden Globe Award", "Screen Actors Guild Award"]
     }
   ],
   "credits": [
