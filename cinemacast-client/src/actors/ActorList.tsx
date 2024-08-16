@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Actor } from "./Actor";
 import { actorAPI } from "./ActorAPI";
+import { Link } from "react-router-dom";
 
 function ActorList() {
   const [actors, setActors] = useState<Actor[]>([]);
@@ -34,6 +35,7 @@ function ActorList() {
           <small>{actor.nationality}</small>
           <small>{actor.gender}</small>
           <small>{actor.imdbID}</small>
+          <Link to={`/actors/edit/${actor.id}`}>edit</Link>
         </div>
       ))}
     </section>

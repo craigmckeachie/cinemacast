@@ -1,10 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MoviesPage from "./movies/MoviesPage";
 import MovieCreatePage from "./movies/MovieCreatePage";
 import MovieEditPage from "./movies/MovieEditPage";
@@ -18,6 +14,8 @@ import SignInPage from "./account/SignInPage";
 import ActorsPage from "./actors/ActorsPage";
 import Header from "./Header";
 import NavPanel from "./NavPanel";
+import ActorCreatePage from "./actors/ActorCreatePage";
+import ActorEditPage from "./actors/ActorEditPage";
 
 function getPersistedUser() {
   const userAsJSON = localStorage.getItem("user");
@@ -33,7 +31,6 @@ function App() {
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
         <Header user={user} />
-
         <main className=" d-flex">
           <Toaster
             toastOptions={{
@@ -61,14 +58,8 @@ function App() {
                 element={<MovieDetailPage />}
               />
               <Route path="/actors" element={<ActorsPage />} />
-              {/* <Route
-              path="/movies/detail/:movieId/credit/create"
-              element={<CreditCreatePage />}
-            />
-            <Route
-              path="/movies/detail/:movieId/credit/edit/:creditId"
-              element={<CreditEditPage />}
-            /> */}
+              <Route path="/actors/create" element={<ActorCreatePage />} />
+              <Route path="/actors/edit/:id" element={<ActorEditPage />} />
             </Routes>
           </section>
         </main>
