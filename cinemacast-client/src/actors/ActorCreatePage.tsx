@@ -1,8 +1,15 @@
+import ActorForm from "./ActorForm";
 
 function ActorCreatePage() {
   return (
-    <div>ActorCreatePage</div>
-  )
+    <>
+      <header className="d-flex justify-content-between">
+        <h4>New Actor</h4>
+      </header>
+      <hr />
+      <ActorForm />
+    </>
+  );
 }
 
-export default ActorCreatePage
+export default ActorCreatePage;
