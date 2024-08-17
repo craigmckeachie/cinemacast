@@ -20,7 +20,7 @@ export const actorAPI = {
     return fetch(`${url}/${id}`).then(checkStatus).then(parseJSON);
   },
 
-  post(actor: Actor) {
+  post(actor: Actor): Promise<Actor> {
     return fetch(`${url}`, {
       method: "POST",
       body: JSON.stringify(actor),
