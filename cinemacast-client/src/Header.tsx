@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import { User } from "./users/User";
+import { useUserContext } from "./users/UserContext";
 
-interface HeaderProps {
-  user: User | undefined;
-}
+function Header() {
+  const { user, setUser } = useUserContext();
+  const navigate = useNavigate();
 
-function Header({ user }: HeaderProps) {
+  function signout() {
+    localStorage.removeItem("user");
+    setUser(undefined);
+    navigate("/signin");
+  }
+
   return (
     <header className="container-fluid px-4 py-4 bg-body-tertiary navbar border-bottom">
       <div>
@@ -55,9 +62,9 @@ function Header({ user }: HeaderProps) {
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <button className="dropdown-item" onClick={signout}>
                 Sign out
-              </a>
+              </button>
             </li>
           </ul>
         </div>
