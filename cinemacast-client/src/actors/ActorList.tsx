@@ -31,7 +31,7 @@ function ActorList() {
       {actors.map((actor) => (
         <div className="card p-4" key={actor.id}>
           <strong>{actor.name}</strong>
-          <small>{actor.awards.join(", ")}</small>
+          <small>{actor.awards?.join(", ")}</small>
           <small>{actor.nationality}</small>
           <small>{actor.gender}</small>
           <small>{actor.imdbID}</small>
