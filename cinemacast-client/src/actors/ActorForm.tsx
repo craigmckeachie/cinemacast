@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Actor } from "./Actor";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { actorAPI } from "./ActorAPI";
 
 function ActorForm() {
   const {
@@ -8,9 +9,11 @@ function ActorForm() {
     handleSubmit,
     formState: { errors },
   } = useForm<Actor>({});
+  const navigate = useNavigate();
 
-  function save(actor: Actor) {
-    console.log(actor);
+  async function save(actor: Actor) {
+    await actorAPI.post(actor);
+    navigate("/actors");
   }
 
   return (
@@ -30,6 +33,20 @@ function ActorForm() {
         />
         <div className="invalid-feedback">{errors?.name?.message}</div>
       </div>
+      <div className="mb-3">
+        <label className="form-label" htmlFor="imdbID">
+          Name
+        </label>
+        <input
+          id="imdbID"
+          {...register("imdbID", {
+            required: "imdbID is required",
+          })}
+          className={`form-control ${errors.imdbID && "is-invalid"} `}
+          type="text"
+        />
+        <div className="invalid-feedback">{errors?.imdbID?.message}</div>
+      </div>
 
       <div className="mb-3">
         <label className="form-label" htmlFor="nationality">
@@ -37,14 +54,35 @@ function ActorForm() {
         </label>
         <input
           id="nationality"
-          {...register("nationality", {
-            required: "Nationality is required",
-          })}
           className={`form-control ${errors.nationality && "is-invalid"} `}
+          {...register("name")}
           type="text"
-          
         />
         <div className="invalid-feedback">{errors?.nationality?.message}</div>
+      </div>
+
+      <div className="mb-3">
+        <label className="form-label" htmlFor="gender">
+          Gender
+        </label>
+
+        <select
+          className={`form-select ${errors.gender && "is-invalid"} `}
+          //   {...register("gender", {
+          //     validate: (value) =>
+          //       value === "Female" || value === "Male" || "Gender is required",
+          //   })}
+          {...register("gender", {
+            required: "Gender is required",
+          })}
+          id="gender"
+        >
+          <option value="">Select...</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+
+        <div className="invalid-feedback">{errors?.gender?.message}</div>
       </div>
 
       <div className="d-flex gap-2">
