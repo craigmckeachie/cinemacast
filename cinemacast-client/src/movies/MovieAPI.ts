@@ -1,5 +1,10 @@
 import { creditAPI } from "../credits/CreditAPI";
-import { BASE_URL, checkStatus, delay, parseJSON } from "../utility/fetchUtilities";
+import {
+  BASE_URL,
+  checkStatus,
+  delay,
+  parseJSON,
+} from "../utility/fetchUtilities";
 import { Movie } from "./Movie";
 
 const url = `${BASE_URL}/movies`;
