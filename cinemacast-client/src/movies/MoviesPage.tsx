@@ -18,7 +18,7 @@ function MoviesPage() {
 
       <hr />
 
-      {/* <MovieTable /> */}
+      <MovieTable />
       <MovieList />
     </>
   );

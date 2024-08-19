@@ -35,7 +35,7 @@ function ActorForm() {
       </div>
       <div className="mb-3">
         <label className="form-label" htmlFor="imdbID">
-          Name
+          IMDB ID
         </label>
         <input
           id="imdbID"
@@ -55,7 +55,7 @@ function ActorForm() {
         <input
           id="nationality"
           className={`form-control ${errors.nationality && "is-invalid"} `}
-          {...register("name")}
+          {...register("nationality")}
           type="text"
         />
         <div className="invalid-feedback">{errors?.nationality?.message}</div>
