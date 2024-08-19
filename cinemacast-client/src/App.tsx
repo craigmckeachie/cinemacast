@@ -1,4 +1,4 @@
-import { Toaster } from "react-hot-toast";
+
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MoviesPage from "./movies/MoviesPage";
@@ -16,6 +16,7 @@ import Header from "./Header";
 import NavPanel from "./NavPanel";
 import ActorCreatePage from "./actors/ActorCreatePage";
 import ActorEditPage from "./actors/ActorEditPage";
+import { Toaster } from "react-hot-toast";
 
 function getPersistedUser() {
   const userAsJSON = localStorage.getItem("user");
@@ -45,6 +46,7 @@ function App() {
               },
             }}
           />
+        
           <NavPanel />
           <section className="p-4 w-100">
             <Routes>

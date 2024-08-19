@@ -30,6 +30,7 @@ function MovieForm() {
       } else {
         await movieAPI.put(movie);
       }
+      toast.success("Successfully saved");
       navigate("/movies");
     } catch (error: any) {
       toast.error(error.message);
@@ -119,7 +120,12 @@ function MovieForm() {
         <label className="form-label" htmlFor="director">
           Director
         </label>
-        <input {...register("director")} className="form-control" type="text" id="director" />
+        <input
+          {...register("director")}
+          className="form-control"
+          type="text"
+          id="director"
+        />
       </div>
 
       <div className="mb-3">
