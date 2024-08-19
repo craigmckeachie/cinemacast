@@ -1,9 +1,9 @@
 import { Actor } from "../actors/Actor";
 
 export class Credit {
-  id: number | undefined = undefined;
-  movieId: number | undefined = undefined;
-  actorId: number | undefined = undefined;
+  id: number | undefined;
+  movieId: number | undefined;
+  actorId: number | undefined;
   role = "";
   actor: Actor | undefined;
 
