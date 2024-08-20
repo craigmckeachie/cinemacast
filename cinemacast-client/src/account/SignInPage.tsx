@@ -50,7 +50,7 @@ function SignInPage() {
   };
 
   return (
-    <main className="signin d-flex flex-column gap-4 justify-content-center align-items-center">
+    <main className="signin vh-100 d-flex flex-column gap-4 justify-content-center align-items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="73"
@@ -72,7 +72,7 @@ function SignInPage() {
       </svg>
 
       <span className="mx-2 fw-semibold">CinemaCast</span>
-      <div className="card w-25 h-25 p-4">
+      <div className="card w-25 p-4">
         <h4 className="card-title">Sign in</h4>
         <form className="d-flex flex-column" onSubmit={handleSubmit(signin)}>
           <div className="mb-3">
