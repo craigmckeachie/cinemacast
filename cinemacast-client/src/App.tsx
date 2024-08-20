@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MoviesPage from "./movies/MoviesPage";
@@ -17,6 +16,7 @@ import NavPanel from "./NavPanel";
 import ActorCreatePage from "./actors/ActorCreatePage";
 import ActorEditPage from "./actors/ActorEditPage";
 import { Toaster } from "react-hot-toast";
+import Layout from "./Layout";
 
 function getPersistedUser() {
   const userAsJSON = localStorage.getItem("user");
@@ -31,40 +31,21 @@ function App() {
   return (
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
-        <Header user={user} />
-        <main className=" d-flex">
-          <Toaster
-            toastOptions={{
-              success: {
-                iconTheme: {
-                  primary: "#0d6efd",
-                  secondary: "white",
-                },
-              },
-              style: {
-                maxWidth: 500,
-              },
-            }}
-          />
-        
-          <NavPanel />
-          <section className="p-4 w-100">
-            <Routes>
-              <Route path="/" />
-              <Route path="/signin" element={<SignInPage />} />
-              <Route path="/movies" element={<MoviesPage />} />
-              <Route path="/movies/create" element={<MovieCreatePage />} />
-              <Route path="/movies/edit/:id" element={<MovieEditPage />} />
-              <Route
-                path="/movies/detail/:movieId/*"
-                element={<MovieDetailPage />}
-              />
-              <Route path="/actors" element={<ActorsPage />} />
-              <Route path="/actors/create" element={<ActorCreatePage />} />
-              <Route path="/actors/edit/:id" element={<ActorEditPage />} />
-            </Routes>
-          </section>
-        </main>
+        <Routes>
+          <Route path="signin" element={<SignInPage />} />
+          <Route element={<Layout />}>
+            <Route path="movies" element={<MoviesPage />} />
+            <Route path="movies/create" element={<MovieCreatePage />} />
+            <Route path="movies/edit/:id" element={<MovieEditPage />} />
+            <Route
+              path="movies/detail/:movieId/*"
+              element={<MovieDetailPage />}
+            />
+            <Route path="actors" element={<ActorsPage />} />
+            <Route path="actors/create" element={<ActorCreatePage />} />
+            <Route path="actors/edit/:id" element={<ActorEditPage />} />
+          </Route>
+        </Routes>
       </UserContext.Provider>
     </Router>
   );

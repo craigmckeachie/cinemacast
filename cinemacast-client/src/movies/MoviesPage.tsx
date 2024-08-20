@@ -5,7 +5,7 @@ import MovieTable from "./MovieTable";
 function MoviesPage() {
   return (
     <>
-      <nav className="d-flex justify-content-between">
+      <header className="d-flex justify-content-between">
         <h4>Movies</h4>
         <Link
           to={"/movies/create"}
@@ -14,11 +14,9 @@ function MoviesPage() {
         >
           + Add Movie
         </Link>
-      </nav>
-
+      </header>
       <hr />
-
-      <MovieTable />
+      {/* <MovieTable /> */}
       <MovieList />
     </>
   );
