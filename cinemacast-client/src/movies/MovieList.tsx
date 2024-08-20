@@ -39,7 +39,7 @@ function MovieList() {
     <>
       {busy && (
         <section className="d-flex justify-content-center align-items-center align-content-center vh-100">
-          <div className=" spinner-border text-primary" role="status">
+          <div className="spinner-border" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
         </section>

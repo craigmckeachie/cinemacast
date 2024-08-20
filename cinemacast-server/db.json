@@ -236,9 +236,7 @@
       "birthDate": "1996-06-01",
       "nationality": "British",
       "gender": "Male",
-      "awards": [
-        "BAFTA Rising Star Award"
-      ]
+      "awards": ["BAFTA Rising Star Award"]
     },
     {
       "id": 2,
@@ -247,9 +245,7 @@
       "birthDate": "1996-09-01",
       "nationality": "American",
       "gender": "Female",
-      "awards": [
-        "Primetime Emmy Award"
-      ]
+      "awards": ["Primetime Emmy Award"]
     },
     {
       "id": 3,
@@ -258,9 +254,7 @@
       "birthDate": "1995-12-27",
       "nationality": "American",
       "gender": "Male",
-      "awards": [
-        "Academy Award Nominee"
-      ]
+      "awards": ["Academy Award Nominee"]
     },
     {
       "id": 4,
@@ -269,9 +263,7 @@
       "birthDate": "1983-10-19",
       "nationality": "Swedish",
       "gender": "Female",
-      "awards": [
-        "Critics' Choice Television Award Nominee"
-      ]
+      "awards": ["Critics' Choice Television Award Nominee"]
     },
     {
       "id": 5,
@@ -280,9 +272,7 @@
       "birthDate": "1986-05-13",
       "nationality": "British",
       "gender": "Male",
-      "awards": [
-        "Hollywood Film Award"
-      ]
+      "awards": ["Hollywood Film Award"]
     },
     {
       "id": 6,
@@ -291,9 +281,7 @@
       "birthDate": "1988-12-01",
       "nationality": "American",
       "gender": "Female",
-      "awards": [
-        "Black Reel Award"
-      ]
+      "awards": ["Black Reel Award"]
     },
     {
       "id": 7,
@@ -302,9 +290,7 @@
       "birthDate": "1968-03-02",
       "nationality": "British",
       "gender": "Male",
-      "awards": [
-        "Golden Globe Award"
-      ]
+      "awards": ["Golden Globe Award"]
     },
     {
       "id": 8,
@@ -313,9 +299,7 @@
       "birthDate": "1981-05-12",
       "nationality": "American",
       "gender": "Male",
-      "awards": [
-        "Academy Award"
-      ]
+      "awards": ["Academy Award"]
     },
     {
       "id": 9,
@@ -324,9 +308,7 @@
       "birthDate": "1964-09-02",
       "nationality": "Canadian",
       "gender": "Male",
-      "awards": [
-        "MTV Movie Award"
-      ]
+      "awards": ["MTV Movie Award"]
     },
     {
       "id": 10,
@@ -335,9 +317,7 @@
       "birthDate": "1967-08-21",
       "nationality": "Canadian",
       "gender": "Female",
-      "awards": [
-        "Independent Spirit Award"
-      ]
+      "awards": ["Independent Spirit Award"]
     },
     {
       "id": 11,
@@ -346,9 +326,7 @@
       "birthDate": "1989-04-19",
       "nationality": "Canadian",
       "gender": "Male",
-      "awards": [
-        "People's Choice Award"
-      ]
+      "awards": ["People's Choice Award"]
     },
     {
       "id": 12,
@@ -357,9 +335,7 @@
       "birthDate": "1988-06-02",
       "nationality": "American",
       "gender": "Female",
-      "awards": [
-        "Golden Globe Award"
-      ]
+      "awards": ["Golden Globe Award"]
     },
     {
       "id": 13,
@@ -368,9 +344,7 @@
       "birthDate": "1981-02-10",
       "nationality": "American",
       "gender": "Female",
-      "awards": [
-        "Annie Award"
-      ]
+      "awards": ["Annie Award"]
     },
     {
       "id": 14,
@@ -379,10 +353,7 @@
       "birthDate": "1980-01-16",
       "nationality": "American",
       "gender": "Male",
-      "awards": [
-        "Pulitzer Prize",
-        "Tony Award"
-      ]
+      "awards": ["Pulitzer Prize", "Tony Award"]
     },
     {
       "id": 15,
@@ -391,10 +362,7 @@
       "birthDate": "1967-02-19",
       "nationality": "Puerto Rican",
       "gender": "Male",
-      "awards": [
-        "Academy Award",
-        "BAFTA Award"
-      ]
+      "awards": ["Academy Award", "BAFTA Award"]
     },
     {
       "id": 16,
@@ -403,10 +371,7 @@
       "birthDate": "1973-04-14",
       "nationality": "American",
       "gender": "Male",
-      "awards": [
-        "Academy Award",
-        "César Award"
-      ]
+      "awards": ["Academy Award", "César Award"]
     },
     {
       "id": 17,
@@ -415,10 +380,7 @@
       "birthDate": "1974-11-11",
       "nationality": "American",
       "gender": "Male",
-      "awards": [
-        "Academy Award",
-        "Golden Globe Award"
-      ]
+      "awards": ["Academy Award", "Golden Globe Award"]
     },
     {
       "id": 18,
@@ -427,10 +389,7 @@
       "birthDate": "1990-08-15",
       "nationality": "American",
       "gender": "Female",
-      "awards": [
-        "Academy Award",
-        "Golden Globe Award"
-      ]
+      "awards": ["Academy Award", "Golden Globe Award"]
     },
     {
       "id": 19,
@@ -439,10 +398,7 @@
       "birthDate": "1990-07-02",
       "nationality": "Australian",
       "gender": "Female",
-      "awards": [
-        "Critics' Choice Movie Award",
-        "BAFTA Award"
-      ]
+      "awards": ["Critics' Choice Movie Award", "BAFTA Award"]
     },
     {
       "id": 20,
@@ -451,10 +407,7 @@
       "birthDate": "1972-09-06",
       "nationality": "British",
       "gender": "Male",
-      "awards": [
-        "Golden Globe Award",
-        "Screen Actors Guild Award"
-      ]
+      "awards": ["Golden Globe Award", "Screen Actors Guild Award"]
     },
     {
       "name": "Australian",
@@ -608,14 +561,14 @@
       "username": "jamestoddsmith",
       "password": "imbad",
       "firstName": "James Todd",
-      "lastname": "Smith"
+      "lastName": "Smith"
     },
     {
       "id": "2",
       "username": "osheajackson",
       "password": "goodday",
       "firstName": "O'Shea",
-      "lastname": "Jackson"
+      "lastName": "Jackson"
     }
   ]
 }

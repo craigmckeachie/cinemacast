@@ -41,7 +41,8 @@ function Header() {
             style={{ width: "3rem", height: "3rem" }}
             className="d-flex  bg-primary-subtle fs-5 text-secondary align-items-center justify-content-center rounded-circle me-2"
           >
-            {user?.initials}
+            {user?.firstName?.substring(0, 1)}
+            {user?.lastName?.substring(0, 1)}
           </span>
           {user?.firstName} {user?.lastName}
         </summary>
