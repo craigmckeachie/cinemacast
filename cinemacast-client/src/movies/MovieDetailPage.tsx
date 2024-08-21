@@ -113,13 +113,13 @@ function MovieDetailPage() {
                 </Link>
               </header>
               <CreditTable movie={movie} onRemove={removeCredit} />
-              <Routes>
+              {/* <Routes>
                 <Route path="credit/create" element={<CreditCreatePage />} />
                 <Route
                   path="credit/edit/:creditId"
                   element={<CreditEditPage />}
                 />
-              </Routes>
+              </Routes> */}
             </section>
           </>
         )}

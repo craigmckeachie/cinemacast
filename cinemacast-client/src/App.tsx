@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MoviesPage from "./movies/MoviesPage";
@@ -46,7 +45,7 @@ function App() {
               },
             }}
           />
-        
+
           <NavPanel />
           <section className="p-4 w-100">
             <Routes>
@@ -56,8 +55,16 @@ function App() {
               <Route path="/movies/create" element={<MovieCreatePage />} />
               <Route path="/movies/edit/:id" element={<MovieEditPage />} />
               <Route
-                path="/movies/detail/:movieId/*"
+                path="/movies/detail/:movieId"
                 element={<MovieDetailPage />}
+              />
+              <Route
+                path="/movies/detail/:movieId/credit/create"
+                element={<CreditCreatePage />}
+              />
+              <Route
+                path="movies/detail/:movieId/credit/edit/:creditId"
+                element={<CreditEditPage />}
               />
               <Route path="/actors" element={<ActorsPage />} />
               <Route path="/actors/create" element={<ActorCreatePage />} />
