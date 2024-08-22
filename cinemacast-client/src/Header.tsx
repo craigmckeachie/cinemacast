@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { User } from "./users/User";
 import { useUserContext } from "./users/UserContext";
 
 function Header() {

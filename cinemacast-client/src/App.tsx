@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <UserContext.Provider value={{ user, setUser }}>
-        <Header user={user} />
+        <Header />
         <main className=" d-flex">
           <Toaster
             toastOptions={{
