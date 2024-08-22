@@ -26,12 +26,13 @@ function MovieForm() {
   const save: SubmitHandler<Movie> = async (movie) => {
     try {
       if (movie.isNew) {
-        await movieAPI.post(movie);
+        const newMovie = await movieAPI.post(movie);
+        navigate(`/movies/detail/${newMovie.id}`);
       } else {
         await movieAPI.put(movie);
+        navigate(`/movies/detail/${movie.id}`);
       }
       toast.success("Successfully saved");
-      navigate("/movies");
     } catch (error: any) {
       toast.error(error.message);
     }

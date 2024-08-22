@@ -12,14 +12,12 @@ import { movieAPI } from "./MovieAPI";
 import CreditTable from "../credits/CreditTable";
 import { creditAPI } from "../credits/CreditAPI";
 import { Credit } from "../credits/Credit";
-import CreditCreatePage from "../credits/CreditCreatePage";
-import CreditEditPage from "../credits/CreditEditPage";
 
 function MovieDetailPage() {
   const { movieId: movieIdAsString } = useParams<{
     movieId: string;
   }>();
-  let [searchParams, ] = useSearchParams();
+  let [searchParams] = useSearchParams();
   const movieId = Number(movieIdAsString);
   const [movie, setMovie] = useState<Movie | undefined>(undefined);
   const [busy, setBusy] = useState(false);
